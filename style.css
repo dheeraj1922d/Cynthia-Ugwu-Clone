@@ -35,6 +35,32 @@ html, body{
 
 }
 
+/* #nav h4:hover{
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+} */
+
+
+#nav h4::before{
+    content:"";
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 3px solid #fff;
+    scale: 0;
+    transform-origin: left bottom;
+    transition: all  0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+#nav h4:hover::before{
+    scale: 1;
+}
+
+#nav h4:hover{
+    cursor: pointer;
+}
 
 #hero{
     height: 100vh;
@@ -58,6 +84,8 @@ html, body{
 #nav h4{
     color: white;
     text-transform: uppercase;
+    transition: all ease 1s;
+    position: relative;
 }
 
 #heading{
@@ -113,6 +141,29 @@ html, body{
 
     
 
+}
+
+.bounderyBox h5:hover{
+    cursor: pointer;
+}
+
+
+.bounderyBox h5:hover::before{
+    scale: 1;
+}
+
+.bounderyBox h5::before{
+    content:"";
+    height: 100%;
+    width: 100%;
+/*     
+    background-color: red; */
+    border-bottom: 3px solid #fff !important;
+    scale: 0;
+    transform-origin: left bottom;
+    transition: all  0.5s;
+    position: absolute;
+    z-index: -1;
 }
 
 #hero-footer{
@@ -179,7 +230,9 @@ html, body{
     position: absolute;
     height: 140%;
     z-index: 999;
+    scale: 0;
     opacity: 0;
+   
 }
 
 #about{

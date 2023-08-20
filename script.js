@@ -56,7 +56,9 @@ document.querySelectorAll(".elem").forEach(function(elm){
     prevRot=dets.clientX;
 
     gsap.to(elm.querySelector(".pic"),{
-      opacity:1,
+       scale: 1,
+       opacity:1,
+       
       //  ease:power1,
        top:diff-185,
        left:dets.clientX-300,
@@ -65,12 +67,16 @@ document.querySelectorAll(".elem").forEach(function(elm){
 
       
     })
+
+
   })
 
   elm.addEventListener("mouseleave", function(){
 
     gsap.to(elm.querySelector(".pic"),{
+      scale:0,
       opacity:0,
+     
       duration: 0.5,
      
     })
